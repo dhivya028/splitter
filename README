@@ -1,0 +1,24 @@
+ 🥭 Fruit Semantic Search with FAISS + Sentence Transformers
+
+This project demonstrates how to perform **semantic similarity search** on a list of fruits using:
+
+- [`sentence-transformers`](https://www.sbert.net/)
+- [`faiss`](https://github.com/facebookresearch/faiss)
+- A sample dataset of fruit names and prices
+
+---
+
+## 🚀 What This Project Does
+
+- Reads a CSV file containing fruit names and their prices.
+- Converts fruit names into dense vector embeddings using the `all-mpnet-base-v2` model.
+- Indexes the embeddings using FAISS (`IndexFlatL2`) for fast similarity search.
+- Takes a natural language query like `"I would like to eat mango and kiwi"` and returns the top 2 semantically similar fruits.
+
+---
+
+## 📂 Files
+
+- `fruits_prices.csv`: CSV file with two columns: `Fruit` and `Price ($/kg)`
+- `main.py`: Core script that encodes fruit names, builds the FAISS index, and performs the similarity search.
+
